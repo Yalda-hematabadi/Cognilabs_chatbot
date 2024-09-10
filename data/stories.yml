@@ -1,0 +1,53 @@
+
+version: "3.1"
+
+stories:
+
+  - story: Greet and ask about law
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_about_law
+      - action: action_get_openai_response
+      - action: utter_did_that_help
+      - action: action_listen
+      - intent: affirm
+      - action: utter_goodbye
+
+  - story: Direct legal question
+    steps:
+      - intent: ask_about_law
+      - action: action_get_openai_response
+      - action: utter_did_that_help
+      - action: action_listen
+      - intent: deny
+      - action: utter_ask_more_info
+      - action: action_listen
+      - intent: provide_more_info
+      - action: action_get_openai_response
+      - action: utter_did_that_help
+      - action: action_listen
+      - intent: affirm
+      - action: utter_goodbye
+
+  - story: Out of scope question
+    steps:
+      - intent: out_of_scope
+      - action: utter_out_of_scope
+      - action: utter_can_help_with_legal
+
+  - story: Clarify legal question
+    steps:
+      - intent: ask_about_law
+      - action: action_get_openai_response
+      - action: utter_did_that_help
+      - action: action_listen
+      - intent: deny
+      - action: utter_ask_more_info
+      - action: action_listen
+      - intent: provide_more_info
+      - action: action_get_openai_response
+      - action: utter_did_that_help
+      - action: action_listen
+      - intent: affirm
+      - action: utter_goodbye

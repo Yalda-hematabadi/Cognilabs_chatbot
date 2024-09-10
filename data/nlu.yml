@@ -1,0 +1,62 @@
+version: "3.1"
+
+nlu:
+  - intent: ask_about_law
+    examples: |
+      - What is the process for filing a lawsuit?
+      - Can you explain corporate law?
+      - I need advice on labor law
+      - How do I register a trademark?
+      - What are my rights as an employee?
+      - How can I protect my intellectual property?
+      - What should I know about contract law?
+      - Can you explain privacy regulations?
+
+  - intent: greet
+    examples: |
+      - Hi
+      - Hello
+      - Hey there
+      - Good morning
+      - Good afternoon
+
+  - intent: goodbye
+    examples: |
+      - Goodbye
+      - See you later
+      - Bye
+      - Thanks, that's all I needed
+      - Have a good day
+
+  - intent: affirm
+    examples: |
+      - Yes
+      - yea
+      - That's correct
+      - Sure
+      - Absolutely
+      - That's right
+
+  - intent: deny
+    examples: |
+      - No
+      - That's not right
+      - I disagree
+      - Not really
+      - I don't think so
+
+  - intent: out_of_scope
+    examples: |
+      - Can you order me a pizza?
+      - What's the weather like today?
+      - Tell me a joke
+      - How do I fix my car?
+      - What's the capital of France?
+
+  - intent: provide_more_info
+    examples: |
+      - Let me give you more details
+      - Here's some additional information
+      - To clarify my situation...
+      - I forgot to mention...
+      - Additionally, I need to know...
