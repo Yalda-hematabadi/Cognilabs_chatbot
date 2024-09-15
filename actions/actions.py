@@ -9,7 +9,7 @@ class ActionGetOpenAIResponse(Action):
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         user_query = tracker.latest_message.get('text')
-        legal_topics = ["contract law", "privacy law", "corporate legal matters", "labor law", "intellectual property", "law", "legal", "legislation", "civil", "lawful"]
+        legal_topics = ["Regulatory Consulting","Corporate Legal Consulting","Law Consultancy","Legal Advisory","Legal Consulting","contract law", "privacy law", "corporate legal matters", "labor law", "intellectual property", "law", "legal", "legislation", "civil", "lawful", "consult"]
 
         if any(topic in user_query.lower() for topic in legal_topics):
             response = self.get_openai_response(user_query)
