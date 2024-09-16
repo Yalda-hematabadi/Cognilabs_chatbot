@@ -11,7 +11,7 @@ rules:
     steps:
       - intent: ask_about_law
       - action: action_get_openai_response
-      - action: utter_did_that_help
+      # - action: utter_did_that_help
       - action: action_listen
 
   - rule: Goodbye message
@@ -29,7 +29,7 @@ rules:
     steps:
       - intent: provide_more_info
       - action: action_get_openai_response
-      - action: utter_did_that_help
+      # - action: utter_did_that_help
       - action: action_listen
 
   - rule: Respond to low NLU confidence

@@ -9,7 +9,7 @@ stories:
       - action: utter_greet
       - intent: ask_about_law
       - action: action_get_openai_response
-      - action: utter_did_that_help
+      # - action: utter_did_that_help
       - action: action_listen
       - intent: affirm
       - action: utter_goodbye
@@ -18,14 +18,14 @@ stories:
     steps:
       - intent: ask_about_law
       - action: action_get_openai_response
-      - action: utter_did_that_help
+      # - action: utter_did_that_help
       - action: action_listen
       - intent: deny
       - action: utter_ask_more_info
       - action: action_listen
       - intent: provide_more_info
       - action: action_get_openai_response
-      - action: utter_did_that_help
+      # - action: utter_did_that_help
       - action: action_listen
       - intent: affirm
       - action: utter_goodbye
@@ -40,14 +40,14 @@ stories:
     steps:
       - intent: ask_about_law
       - action: action_get_openai_response
-      - action: utter_did_that_help
+      # - action: utter_did_that_help
       - action: action_listen
       - intent: deny
       - action: utter_ask_more_info
       - action: action_listen
       - intent: provide_more_info
       - action: action_get_openai_response
-      - action: utter_did_that_help
+      # - action: utter_did_that_help
       - action: action_listen
       - intent: affirm
       - action: utter_goodbye

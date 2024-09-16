@@ -22,19 +22,19 @@ responses:
   utter_fallback:
     - text: "I'm not sure I understood that correctly. Could you rephrase your question or provide more details?"
 
-  utter_did_that_help:
-    - text: "Was that information helpful to you?"
-      buttons:
-      - title: Yes
-        payload: /affirm
-      - title: No
-        payload: /deny
+  # utter_did_that_help:
+  #   - text: "Was that information helpful to you?"
+  #     buttons:
+  #     - title: Yes
+  #       payload: /affirm
+  #     - title: No
+  #       payload: /deny
 
   utter_out_of_scope:
     - text: "I apologize, but that topic is outside of my area of expertise."
 
   utter_can_help_with_legal:
-    - text: "I'm specialized in providing information about contract law, privacy law, and corporate legal matters. Is there anything in these areas I can assist you with?"
+    - text: "I'm specialized in providing legal consultation. Is there anything in this area I can assist you with?"
 
 entities:
   - law_type
@@ -59,6 +59,6 @@ actions:
   - utter_goodbye
   - utter_ask_more_info
   - utter_fallback
-  - utter_did_that_help
+  # - utter_did_that_help
   - utter_out_of_scope
   - utter_can_help_with_legal
